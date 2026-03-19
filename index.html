@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+
+    <style>
+
+        /* disposition des projets */
+        #projets {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        /* police, couleurs et dispositions des éléments du body */
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            color: black;
+            background: #EFF0EF;
+        }
+
+
+
+        /* disposition et apparence de l'entete */
+
+        header {
+            background-image: ;
+            color: black;
+            text-align: center;
+            padding: 40px 20px;
+            
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 2.2em;
+            opacity: 0.9;
+        }
+
+        /* onglet de navigation */
+        
+        nav {
+            background-image:url("bg.jpg");
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            border-radius: 30px;
+
+        }
+        nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border: 1px solid;
+            box-shadow: 0 0 10px;
+            border-radius: 30px;
+            transition: .7s;
+            background: #3498db;
+        }
+
+        nav a:hover {
+            background-color:#eaf6ff;
+            box-shadow: 0px 3px 20px #3498db;
+            color: black;
+
+        }
+
+        /* contenu principal */
+        main {
+            max-width: 900px;
+            margin: 30px 15px;
+            padding: 0 20px;
+        }
+
+        /* table td, th {
+            border: 2px solid black;
+        
+        }
+        table{
+            padding: 20px;
+            margin-right:10px ;
+        } */
+
+        /* apparence des différentes sections */
+
+    
+        section {
+
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgb(0, 0, 0);
+            width: max-content;
+            background: white;
+        }
+
+        #propos {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        #competences table {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+
+        #propos .propos-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        #competences .competences-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        #competences .photo {
+            flex: 0 0 auto;
+        }
+
+        #competences .img {
+            width: 320px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        #propos .photo {
+            flex: 0 0 auto;
+        }
+
+        #propos img {
+            width: 320px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        #competences {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        #competences .competences-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        #competences .competences-photo {
+            flex: 0 0 auto;
+        }
+
+        #competences img {
+            width: 280px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        section h1 {
+            text-decoration: none;
+        }
+
+        img {
+            height: auto;
+            width: 360px;
+            border-radius: 30px;
+            
+        }
+
+        article {
+            border: 1px #3498db;
+            border-radius: 8px;
+            padding: 20px;
+            margin:15px 0;
+            box-shadow: 0 0 10px #3498db;
+        }
+
+        /* apparence du formulaire */
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid#ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        form button {
+            margin-top: 20px;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-right: 10px;
+            transition: 0.5s;
+        }
+
+        form button:hover {
+            background-color: aquamarine;
+        }
+
+        fieldset {
+            border: 2px solid #3498db;
+            border-radius:8px;
+            padding: 20px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 0 10px;
+        }
+
+        aside {
+            background-color:#eaf6ff;
+            border-left:4px solid #3498db;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        blockquote {
+            background-color:#eaf6ff;
+            border-left:4px solid #3498db;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+
+        }
+
+        footer {
+
+            color:#3498db;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+
+        }
+
+        table {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        th {
+            border:solid;
+            padding: 6px;
+        }
+
+        td {
+        border: 2px solid black;
+        padding: 10px;
+        text-align: left;
+        }
+
+
+        
+                footer a {
+                    color: #3498db;
+                }
+
+    </style>
+
+    <header>
+
+        <h1>Emmanuel KINIFFO</h1>
+
+        <p>Developpeur Web Junior | Passionné de code et de design</p>
+
+        <nav>
+
+                <a href="#propos">A propos</a>
+                <a href="#competences">Mes Compétences</a>
+                <a href="#projets">Mes projets</a>
+                <a href="#contacts">Contacts</a>
+
+        </nav>
+
+
+    </header>
+
+    <hr>
+
+    <main>
+
+        <!-- section à propos de moi -->
+        <section id="propos">
+
+            <h1>A propos de moi</h1>
+
+            <div class="propos-text">
+                <p>
+                    Bonjour ! Je m'appelle <strong>Emmanuel KINIFFO</strong> 
+                    <br>
+                    et je suis developpeur web junior basée a <em>Cotonou, Bénin.</em>
+                </p>
+
+                <p>
+                     Apres une formation intensive en developpement web,
+                    <br>
+                    je me passionne pour la creation de sites modernes, 
+                    <br>
+                    accessibles et bien structurés.
+
+                </p>
+
+                <p>
+                    En dehors du code, j'aime la photographie, la musique, 
+                    <br>
+                    le design et la mode. Je crois fermement que la technologie 
+                    <br>
+                    doit etre au service de tous, c'est pourquoi l'<strong>accessibilite web</strong>
+                    <br>
+                    me tient particulierement a coeur.                
+                </p>
+            </div>
+
+            <div class="photo">
+                <img src="pic1.jpg" alt="ma photo">
+            </div>
+
+        </section>
+
+        <hr>
+
+        <!-- section compétences -->
+
+        <section id="competences">
+
+            <h2>Mes compétences</h2>
+            <hr>
+
+            
+            
+
+            <div class="competences-text">
+<br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Technologies</th>
+                            <th>Mes Niveaux</th>
+                            <th>Expériences</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML5</td>
+                            <td>Intermédiaire</td>
+                            <td>(1) une année</td>
+                        </tr>
+
+                        <tr>
+                            <td>CSS3</td>
+                            <td>Intermédiaire</td>
+                            <td>(1) une année</td>
+                        </tr>
+
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Intermédiaire</td>
+                            <td>(1) une année</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="photo">
+                <img src="https://i.pinimg.com/736x/0d/42/c5/0d42c51c82fca7b2a1360ffec4747b2a.jpg" alt="illustration">
+            </div>
+
+
+        </section>
+        <!-- section projets -->
+
+        <section id="projets">
+
+            <h2>Mes projets</h2>
+            <hr>
+
+            <article>
+                    <a href="https://www.threads.com/@maciejsphotos/post/DVyIDPRGqm2?xmt=AQF0WGbiN2-AgYAM_xHQLo1ILZ9xTAYhFMFiSUD8AbtELA" style="text-decoration: none;">
+
+                        <h3><u style="color: black;">Photographie - Avenue de Tokyo</u></h3>
+
+                        <img src="pic1.jpg" alt="une image de Tokyo">
+
+                        <p style="text-decoration:none; color: black;">
+                            Collections de photo prise dans la ville de Tokyo
+                            
+                        </p>
+                    </a>
+
+            </article>
+
+            <article>
+                <a href="https://www.benin.bj" style="text-decoration: none;color: black;">
+
+                    <h4><u>Programmation - Bénin</u></h4>
+                    <img src="https://res.cloudinary.com/benin/image/upload/f_auto,q_80,w_800,h_800,c_fill/photo-1-fm" alt="festival des masques au bénin">
+
+                    <p>
+                        Conception d'une plateforme web qui présente le Bénin.
+                    </p>
+
+                </a>
+
+            </article>
+
+        </section>
+
+        <section id="contacts">
+
+            <form action="traitement.php" method="post">
+
+                <fieldset>
+
+                    <legend>Contactez-moi</legend>
+
+                        <p>
+                            <label for="email"> Email: </label>
+                            <input type="email" id="email" placeholder="test@example.com">
+                        </p>
+
+                        <p>
+                            <label for="objet">Objet: </label>
+                            <input type="text" name="objet" id="objet" placeholder="insérer l'objet">
+                        </p>
+
+                        <p>
+                            <label for="message">Message: </label>
+                            <textarea name="message" id="message" placeholder="Saisissez votre message"></textarea>
+                        </p>
+
+                </fieldset>
+                    <button type="submit">Envoyer</button>
+                    <button type="reset">Effacer</button>
+
+            </form>
+
+        </section>
+
+        <aside>
+            <p><i>S'il y'a quelqu'un posé à coté de toi, forcément il t'écoutes.</i></p>
+        </aside>
+
+    </main>
+    
+</body>
+
+<footer>
+
+          <p>&copy; 2026 Emmanuel KINIFFO. Tous droits réservés.</p>
+
+      <!-- Liens vers les reseaux sociaux (fictifs) -->
+      <p>
+        <a href="https://github.com/bignelxp" target="_blank"><i class="ri-github-line"></i>GitHub</a> |
+        <a href="https://linkedin.com/in/emmanuelkiniffo" target="_blank"
+          ><i class="ri-linkedin-fill"></i>LinkedIn</a
+        >
+        |
+        <a href="mailto:isnelkiniffo@yahoo.com"><i class="ri-mail-line"></i>Email</a>
+      </p>
+
+
+</footer>
+</html>
